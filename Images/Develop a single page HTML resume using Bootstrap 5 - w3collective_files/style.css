@@ -1,0 +1,537 @@
+/*
+Theme Name: w3c
+Version: 2.0.5
+*/
+
+body {
+  background-color: #191e21;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+pre,
+figure {
+  margin: 0 0 35px;
+}
+h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  margin-bottom: 15px !important;
+  max-width: 90%;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  border-bottom: 1px solid #fff;  
+  font-size: 25px;
+  display: block;
+  padding-bottom: 10px;
+}
+h4 {
+  border-top: 1px solid #fff;
+  font-size: 20px;
+  padding-top: 22px;
+  margin-bottom: 25px !important;
+}
+ul {
+  padding: 0 0 0 17px;
+}
+li {
+  margin-bottom: 10px;
+}
+a {
+  border-bottom: 2px solid #81a1c1;
+  color: #81a1c1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+pre {
+  font-size: 14px;
+}
+code {
+  background: #1d2326 !important;
+  border: 2px solid #666;
+  border-radius: 2px;
+  font-size: 14px !important;
+  padding: 30px !important;
+}
+p code,
+li code {
+  font-size: 13px;
+  border-width: 1px;
+  padding: 3px 5px !important;
+}
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.screen-reader-text {
+  display: none;
+}
+
+/* ---------- layout ---------- */
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+#content {
+  margin: auto;
+  padding: 0 15px;
+}
+#main {
+  margin: auto;
+}
+
+/* ---------- header ---------- */
+
+#header-wrapper {
+  background-color: #171717;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+#header {
+  align-items: center;
+  display: flex;
+  padding: 25px 0 25px 0;
+  margin: auto;
+  justify-content: space-between;
+}
+#header-site {
+  color: #fff !important;
+}
+#header a {
+  font-weight: 500;
+  font-size: 15px;
+}
+#header a:hover {
+  color: #81a1c1;
+}
+#header nav {
+  margin: auto;
+}
+#header nav ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0;
+}
+#header nav li {
+  display: inline;
+  margin: 0 20px 0 0px;
+}
+@media (max-width: 760px) {
+  #header nav li {
+    margin-right: 5px;
+  }
+}
+#header nav a {
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#header #s {
+  border: none;
+  padding: 5px;
+  background: #fff url("img/icon-search.svg") 97% center no-repeat;
+  background-size: 16px 16px;
+  border-radius: 2px;
+}
+#header #searchsubmit {
+  display: none;
+}
+@media (max-width: 730px) {
+  #header {
+    display: block;
+  }
+  #header nav,
+  #header form {
+    margin-top: 15px;
+  }
+}
+#header-home {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+#header-home h1 {
+  max-width: 100%;
+}
+#header-home p {
+  font-size: 20px;
+}
+
+/* ---------- top banner ---------- */
+
+#top-banner {
+  text-align: center;
+  padding: 5px;
+  background: #81a1c1;
+}
+#top-banner a {
+  color: #191e21;
+  border: none;
+  font-size: 14px;
+}
+#top-banner a:hover {
+  color: #fff;
+}
+#top-banner span {
+  background-color: #191e21;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  position: relative;
+  top: -1px;
+  margin-right: 4px;
+}
+
+/* ---------- footer ---------- */
+
+#footer {
+  clear: both;
+  margin: auto;
+  font-size: 14px;
+  padding: 30px;
+}
+#footer:before {
+  width: 100%;
+  content: "";
+  display: block;
+  padding-bottom: 30px;
+  border-top: 1px solid #fff;
+}
+#footer-hosting {
+  display: inline-block;
+  margin-bottom: 15px;
+  border: none;
+}
+#footer nav ul {
+  padding: 0;
+  margin-bottom: 10px !important;
+}
+#footer nav li {
+  display: inline;
+  list-style: none;
+  margin-right: 8px;
+}
+#footer nav li a {
+  color: #fff;
+}
+#footer nav li a:hover {
+  color: #81a1c1;
+}
+#footer p {
+  margin-bottom: 5px !important;
+}
+
+/* ---------- post teasers ---------- */
+#articles {
+  margin-bottom: 30px;
+}
+#articles article {
+  background-color: #171717;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+#articles article:hover {
+  background-color: #111;
+}
+@media (max-width: 700px) {
+  #articles {
+    display: block;
+  }
+  #articles article {
+    margin-bottom: 15px;
+  }
+}
+.teaser {
+  border: none;
+  display: block;
+  font-size: 18px;
+  padding: 15px 20px;
+  color: #fff;
+}
+.teaser:hover {
+  color: #fff;
+}
+.teaser .tag {
+  color: #fff !important;
+  font-size: 13px;
+  margin-right: 5px;
+  font-weight: normal;
+}
+.teaser .date {
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* ---------- sticky posts ---------- */
+
+#sticky {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-bottom: 30px;
+}
+#sticky article {
+  border-radius: 3px;
+  background: #81a1c1;
+  transition: all 0.2s ease;
+}
+#sticky article a {
+  display: block;
+  color: #171717;
+  font-weight: bold;
+  font-size: 23px;
+  height: 100%;
+}
+#sticky article:hover {
+  background-color: #b2d2f4;
+}
+#sticky article .teaser {
+  padding: 15px 25px;
+}
+@media (max-width: 730px) {
+  #sticky {
+    display: block;
+  }
+  #sticky article {
+    margin-bottom: 10px;
+  }
+}
+
+/* ---------- single posts ---------- */
+.meta {
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  float: left;
+  width: 100%;
+}
+@media (max-width: 728px) {
+  .meta {
+    padding-bottom: 0;
+  }
+}
+.meta .tag {
+  color: #fff;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.meta p {
+  font-size: 15px;
+  color: #fff;
+  margin: 0 0 15px 0 !important;
+}
+.meta p span {
+  font-size: 13px;
+  margin: 0 5px;
+}
+.meta p a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+.meta p img {
+  display: inline;
+  margin: 2px 3px 0 0;
+  position: relative;
+  top: 4px;
+}
+#meta-plus p {
+  margin-bottom: 25px !important;
+}
+
+@media (max-width: 760px) {
+  #meta-plus {
+    display: block;
+  }
+}
+
+.wp-block-image {
+  margin-bottom: 35px;
+}
+.wp-block-code {
+  width: 100%;
+}
+
+/* ---------- ads - 3up ---------- */
+
+#ads-4up {
+  display: flex;
+  gap: 15px;
+}
+#ads-4up .ad {
+  border: 15px solid #fff;
+  border-radius: 3px;
+}
+h4 span {
+  background-color: #81a1c1;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0px 5px;
+  color: #171717;
+  font-size: 15px;
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+/* ---------- pagination ---------- */
+
+.nav-links {
+  margin: 30px 0;
+}
+.nav-links .current {
+  background-color: #151515 !important;
+  color: #fff !important;
+}
+.nav-links a,
+.nav-links .current {
+  background-color: #1d2326;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-right: 4px;
+}
+.nav-links a:hover {
+  background-color: #666;
+}
+.nav-links .dots {
+  background-color: transparent;
+  padding: 0;
+  font-size: 25px;
+}
+
+.wp-block-search {
+  margin: 60px auto 90px auto;
+}
+.wp-block-search label {
+  display: none;
+}
+.wp-block-search__input {
+  padding: 6px;
+  font-size: 18px;
+}
+
+/* ---------- email octopus ---------- */
+
+.email-octopus-form-row-hp {
+  display: none;
+}
+.email-octopus-form-row {
+  float: left;
+  width: 250px;
+}
+.email-octopus-form-row input {
+  width: 240px;
+  padding: 12px 8px;
+  border: 2px solid #fff;
+  border-radius: 3px 0 0 3px;
+  background-color: #fff;
+  outline: none;
+  color: #000;
+}
+.email-octopus-form-row-subscribe button {
+  margin-left: -3px;
+  padding: 11px 16px;
+  border: 2px solid #fff;
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #171717;
+  color: #fff;
+  font-size: 15px;
+}
+.email-octopus-intro {
+  font-size: 13px !important;
+  padding-top: 8px;
+}
+@media (max-width: 380px) {
+  .email-octopus-form-row {
+    width: 200px;
+  }
+  .email-octopus-form-row input {
+    width: 190px;
+  }
+}
+
+/* ---------- carbon ads ---------- */
+
+#carbon-octopus {float: left; width: 100%;}
+
+#carbonads a {
+  border: none;
+}
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 300px;
+  float: left;
+  margin-right: 30px;
+}
+@media (max-width: 728px) {
+  #carbonads {
+    float: none;
+  }
+}
+#carbonads > span {
+  display: block;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 1px 1px hsla(0, 0%, 0%, 0.05), 0 0 2px 2px hsla(0, 0%, 0%, 0.05), 0 0 4px 4px hsla(0, 0%, 0%, 0.05);
+}
+#carbonads .carbon-wrap {
+  display: flex;
+}
+#carbonads .carbon-img {
+  margin-right: 10px;
+  line-height: 1;
+}
+#carbonads .carbon-text {
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  text-decoration: none;
+  color: #637381;
+}
+#carbonads .carbon-poweredby {
+  position: absolute;
+  bottom: 10px;
+  left: 152px;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #c5cdd0;
+}

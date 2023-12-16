@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://w3collective.com/html-resume-bootstrap/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Develop a single page HTML resume using Bootstrap 5 - w3collective</title>
+<!-- This site is running CAOS for Wordpress -->
+
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta name="robots" content="max-snippet:-1,max-image-preview:standard,max-video-preview:-1">
+<meta name="description" content="In this tutorial we&#39;ll be building HTML resume using Bootstrap 5. Here&#39;s what the finished product will look like: Let&#39;s get started by loading Bootstrap into a…">
+<meta property="article:published_time" content="2020-09-25T03:51+00:00">
+<meta property="article:modified_time" content="2022-11-25T00:06+00:00">
+<link rel="canonical" href="https://w3collective.com/html-resume-bootstrap/">
+<script type="text/javascript" async="" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/0f66fb56.js.download"></script><script type="text/javascript" async="" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/38e33e54.js.download"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://w3collective.com/","name":"w3collective"}},{"@type":"ListItem","position":2,"item":{"@id":"https://w3collective.com/category/tutorial/","name":"Tutorial"}},{"@type":"ListItem","position":3,"item":{"@id":"https://w3collective.com/html-resume-bootstrap/","name":"Develop a single page HTML resume using Bootstrap 5"}}]}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 4.46ms meta | 0.54ms boot -->
+
+<link rel="preconnect" href="https://www.google-analytics.com/">
+<link rel="alternate" type="application/rss+xml" title="w3collective » Feed" href="https://w3collective.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="w3collective » Comments Feed" href="https://w3collective.com/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/w3collective.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=ff2fc40e2ebc26e2cd74ed2da9b47afb"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/style.min.css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/classic-themes.min.css" media="all">
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="bodiggity-style-css" href="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/style.css" media="all">
+<script defer="" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/detect-ad-block.js.download" id="caos-track-ad-blockers-js"></script>
+<script id="caos-track-ad-blockers-js-after">
+        
+            document.addEventListener('caos_track_ad_blockers', function(e) {
+                document.addEventListener('DOMContentLoaded', function(e) {
+                    var caos_detect_ad_blocker = 1;
+
+                                            var cid = '';
+                    
+                    if (document.getElementById('caos-detect-ad-block')) {
+                        caos_detect_ad_blocker = 0;
+                    }
+                    var ajax = new XMLHttpRequest();
+                    ajax.open('POST', 'https://w3collective.com/wp-json/caos/v1/block/detect');
+                    ajax.onreadystatechange = function() {
+                        if (ajax.readyState !== 4 || ajax.readyState !== 200) return;
+                    };
+                    ajax.send("result=" + caos_detect_ad_blocker + '&cid=' + cid);
+                });
+            });
+        
+</script>
+<script src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/f736314d.js.download" id="caos-gtag-js"></script>
+<script id="caos-gtag-js-after">
+    
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-171270627-1', {"cookie_prefix":"CaosGtag","cookie_domain":"w3collective.com","cookie_expires":2592000,"cookie_flags":"samesite=none;secure","allow_google_signals":true,"anonymize_ip":true,"site_speed_sample_rate":"1"});
+                gtag('config', 'G-EETERXBF9E');
+                        var event = new Event('caos_track_ad_blockers');
+        document.dispatchEvent(event);
+        
+</script>
+<link rel="https://api.w.org/" href="https://w3collective.com/wp-json/"><link rel="alternate" type="application/json" href="https://w3collective.com/wp-json/wp/v2/posts/906"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://w3collective.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://w3collective.com/wp-includes/wlwmanifest.xml">
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
+	<link href="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/css2" rel="stylesheet">
+<script id="_carbonads_projs" type="text/javascript" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/CWYDCKQ7.json"></script></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div id="top-banner">
+	<a target="_blank" rel="nofollow noopener" href="https://click.linksynergy.com/fs-bin/click?id=vSh04XehcDw&amp;offerid=507388.1541&amp;subid=0&amp;type=4">
+	<span>#AD</span> Top Online Web Development &amp; Programming Courses | Udemy
+    </a>
+</div>
+<div id="header-wrapper">
+	<header id="header" class="container">					
+		<a id="header-site" href="https://w3collective.com/" rel="home">w3collective</a>
+					<nav>
+				<div class="menu-header-container"><ul id="menu-header" class="menu"><li id="menu-item-1813" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1813"><a href="https://w3collective.com/tag/html/">HTML</a></li>
+<li id="menu-item-1814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1814"><a href="https://w3collective.com/tag/css/">CSS</a></li>
+<li id="menu-item-1815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1815"><a href="https://w3collective.com/tag/js/">JavaScript</a></li>
+<li id="menu-item-1816" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1816"><a href="https://w3collective.com/tag/react/">React</a></li>
+<li id="menu-item-1817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1817"><a href="https://w3collective.com/tag/node/">Node.js</a></li>
+</ul></div>			</nav>		
+				<form role="search" method="get" id="searchform" class="searchform" action="https://w3collective.com/">
+    <div><label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" name="s" id="s">
+    <input type="submit" id="searchsubmit" value="Search">
+    </div>
+    </form>	</header>
+	 
+</div>
+<div id="content" class="container">
+	<main id="main">
+	
+
+		<article id="post-906" class="post-906 post type-post status-publish format-standard hentry category-tutorial tag-bootstrap">
+					
+		<div class="meta" id="post-meta">
+			<div id="meta-plus">			
+				<h1>Develop a single page HTML resume using Bootstrap 5</h1>			
+				<p>
+					Last modified November 25th 2022					<span>|</span>
+									
+															
+						<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/icon-github.png" width="18" alt="GitHub">
+						<a href="https://gist.github.com/w3collective/6e388ba5c8eb8918243fee47400a3027" target="_blank" rel="nofollow noopener">Source Code [GitHub]</a>				
+						
+					<span>|</span>
+					<a class="tag" href="https://w3collective.com/tag/bootstrap/">#bootstrap</a> 								
+				</p>		
+				<div id="carbon-octopus">
+					<script async="" type="text/javascript" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42JUCYSI65QMFTSLYKQNCASI453WCTYDEZ3JCYSI5KJECWBI5K3KC6YICKJNCAAIV27MCKBICKQWCESIL5QNHEYIK27NCAYIV23ECTNCYBZ52K?segment=placement:w3collectivecom;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/1670532177-Stock.jpg" alt="ads via Carbon" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42JUCYSI65QMFTSLYKQNCASI453WCTYDEZ3JCYSI5KJECWBI5K3KC6YICKJNCAAIV27MCKBICKQWCESIL5QNHEYIK27NCAYIV23ECTNCYBZ52K?segment=placement:w3collectivecom;" class="carbon-text" target="_blank" rel="noopener sponsored">Get 10 Free Images From Adobe Stock. Start Now.</a></span><a href="http://carbonads.net/?utm_source=w3collectivecom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>	
+					<div class="email-octopus-form-wrapper">    
+						<p class="email-octopus-success-message"></p>
+						<p class="email-octopus-error-message"></p>
+						<form method="post" action="https://emailoctopus.com/lists/186c2b82-e8fc-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add" class="email-octopus-form bound" data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6">        
+							<div class="email-octopus-form-row">            
+								<input id="field_0" name="field_0" type="email" placeholder="">
+							</div>
+							<div class="email-octopus-form-row-hp" aria-hidden="true">
+								<!-- Do not remove this field, otherwise you risk bot sign-ups -->
+								<input type="text" name="hp186c2b82-e8fc-11ea-a3d0-06b4694bee2a" tabindex="-1" autocomplete="nope">
+							</div>
+							<div class="email-octopus-form-row-subscribe">
+								<input type="hidden" name="successRedirectUrl" value="">
+								<button type="submit">Subscribe</button>
+							</div>
+						</form> 
+						<p class="email-octopus-intro">Subscribe to get the latest tutorials straight to your inbox!</p>  
+						<!-- Subscribe to our newsletter for the latest tutorials, tips, and more! --> 
+					</div>
+					<script async="" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/formEmbed.js.download"></script>
+				</div>
+			</div>	
+		</div>			
+
+		<div class="single" style="clear:both;">			
+			
+<p>In this tutorial we’ll be building HTML resume using Bootstrap 5.</p>
+
+
+
+<p>Here’s what the finished product will look like:</p>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img decoding="async" src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/bootstrap-resume-717x1024.png" alt="HTML resume built with Bootstrap CSS framework." class="wp-image-907" width="359" height="512" srcset="https://w3collective.com/wp-content/uploads/2020/09/bootstrap-resume-717x1024.png 717w, https://w3collective.com/wp-content/uploads/2020/09/bootstrap-resume-210x300.png 210w, https://w3collective.com/wp-content/uploads/2020/09/bootstrap-resume-768x1097.png 768w, https://w3collective.com/wp-content/uploads/2020/09/bootstrap-resume-1075x1536.png 1075w, https://w3collective.com/wp-content/uploads/2020/09/bootstrap-resume.png 1090w" sizes="(max-width: 359px) 100vw, 359px"></figure>
+
+
+
+<p>Let’s get started by loading Bootstrap into a HTML file as follows:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-1" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><link rel="stylesheet" id="syntax-highlighting-code-block-css" href="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/nord.css" media="all"><style>.wp-block-code {
+	border: 0;
+	padding: 0;
+}
+
+.wp-block-code > div {
+	overflow: auto;
+}
+
+.shcb-language {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+	word-break: normal;
+}
+
+.hljs {
+	box-sizing: border-box;
+}
+
+.hljs.shcb-code-table {
+	display: table;
+	width: 100%;
+}
+
+.hljs.shcb-code-table > .shcb-loc {
+	color: inherit;
+	display: table-row;
+	width: 100%;
+}
+
+.hljs.shcb-code-table .shcb-loc > span {
+	display: table-cell;
+}
+
+.wp-block-code code.hljs:not(.shcb-wrap-lines) {
+	white-space: pre;
+}
+
+.wp-block-code code.hljs.shcb-wrap-lines {
+	white-space: pre-wrap;
+}
+
+.hljs.shcb-line-numbers {
+	border-spacing: 0;
+	counter-reset: line;
+}
+
+.hljs.shcb-line-numbers > .shcb-loc {
+	counter-increment: line;
+}
+
+.hljs.shcb-line-numbers .shcb-loc > span {
+	padding-left: 0.75em;
+}
+
+.hljs.shcb-line-numbers .shcb-loc::before {
+	border-right: 1px solid #ddd;
+	content: counter(line);
+	display: table-cell;
+	padding: 0 0.75em;
+	text-align: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+	width: 1%;
+}
+</style><div><code class="hljs language-xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Bootstrap Resume<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>   
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>    
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-1"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>Next we’ll add markup for the <code>&lt;header&gt;</code> section that contains a profile picture and text overview in a two column layout:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-2" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-primary bg-gradient text-white py-5"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md-3 text-left text-md-center mb-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"rounded-circle img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.pravatar.cc/175?img=32"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Profile Photo"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md-9"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Laura Collins<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Freelance Web Developer<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"border-top pt-3"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio lacus, sollicitudin in dolor at, consequat volutpat ante. Integer quis consequat turpis, quis porta orci. Proin tincidunt volutpat faucibus. Suspendisse ac nisl purus suspendisse eleifend interdum orci non pharetra. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>        
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-2"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<ul><li><code>bg-primary bg-gradient</code> – Applies a background color with a gradient in the Bootstrap primary blue color. A list of all the color options in Bootstrap can be found <a rel="noreferrer noopener" href="https://v5.getbootstrap.com/docs/5.0/utilities/colors/#background-color" target="_blank">here</a>.</li><li><code>py-5</code> – Set’s the padding on the y-axis (top &amp; bottom). Both padding and margin in Bootstrap can be applied to specific sides, axis, or all around. The size value can be between 0 for no padding/margin an a maximum of 5 which equates to <code>3rem</code>.</li><li><code>container</code> – The container class in Bootstrap restricts the width of the content. We’ve added the container inside the <code>&lt;header&gt;</code> so the background color will be full width whilst the content will be contained within the container.</li><li><code>col-md-3 &amp; col-md-9</code> – Bootstrap uses a 12 column grid system, here we are dividing the grid into 2 columns. One spanning 3 columns and the other 9 columns on medium and larger devices (≥768px). On smaller devices each column will become full width and stack on top of each other.</li><li><code>text-left text-md-center</code> – This align’s the profile image on the left hand side on devices smaller the medium breakpoint (768px) and centered on larger devices.</li><li><code>rounded-circle</code> – Give’s the square profile photo a rounded appearance.</li></ul>
+
+
+
+<p>Underneath the header we’ll add a <code>&lt;nav&gt;</code> section with email, website, and phone number links.</p>
+
+
+
+<p>Bootstrap now includes its own custom SVG icon library that can be found <a rel="noreferrer noopener" href="https://icons.getbootstrap.com/" data-type="URL" data-id="https://icons.getbootstrap.com/" target="_blank">here</a>. Click on an icon you would like to use and copy the code provided. By default the width and height of the icons is <code>1em</code> but this has been increased to <code>1.5em</code> so they appear slightly larger:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-3" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-dark text-white-50 mb-5"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row p-3"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md pb-2 pb-md-0"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1em"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1.5em"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bi bi-envelope"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white ml-2"</span>&gt;</span>lcollins@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md text-md-center pb-2 pb-md-0"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1.5em"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1.5em"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bi bi-globe"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white ml-2"</span>&gt;</span>www.lauracollins.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md text-md-right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1.5em"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1.5em"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bi bi-telephone-fill"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white ml-2"</span>&gt;</span>+12 3456 7890<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-3"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<ul><li><code>text-white-50</code> – Sets the opacity of the icons to 50%. </li><li><code>col-md</code> – Previously we set the column width manually, as this row has three even columns a size isn’t required. If more columns were added the size will adjust accordingly.</li><li><code>pb-2 pb-md-0</code> – As the columns will stack on small devices we’ve added some padding to the bottom of each anchor tag and then removed this padding on medium and larger devices.</li><li><code>text-md-center text-md-right</code> – We want the text to be left aligned when the columns are stacked on small devices and center/right align on larger devices.</li></ul>
+
+
+
+<p>The main content section of resume will contain 2 evenly sized columns and 2 rows. Lets add the markup for this layout and then we can populate each of the individual sections:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-4" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-5"</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- work experience --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-5"</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- education --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>     
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-5"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- skills --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md"</span>&gt;</span>    
+      <span class="hljs-comment">&lt;!-- recent work --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>     
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-4"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>The “Work Experience” section contains a simple unordered list. The only Bootstrap used is a margin on the primary heading and text color on the sub headings:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-5" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-5"</span>&gt;</span>Work Experience<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-primary"</span>&gt;</span>Senior Web Developer / Digital Agency 2016-2020<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Phasellus et tellus iaculis, interdum augue vel, luctus nulla. Aenean viverra, magna a ultricies elementum, dui mi tristique ligula, non euismod leo mauris ac metus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-primary"</span>&gt;</span>Web Developer / Big Firm 2010-2015<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Mauris volutpat, ex condimentum fringilla imperdiet, nulla turpis semper diam, ac semper risus urna quis libero. Fusce non nunc quam. Ut vulputate, magna eget molestie luctus, elit est posuere lorem, quis dapibus dolor felis id mi.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-primary"</span>&gt;</span>Junior Web Developer / Websites 'R' Us 2004-2009<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sed eu turpis placerat, posuere odio a, viverra velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-5"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>In the “Education” section we’ll use the same HTML markup as the “Work Experience” section. As these two sections sit within the same row the content below will remain on the same line and not shift into space left by us having less content in the “Education” column:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-6" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-5"</span>&gt;</span>Education<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-primary"</span>&gt;</span>Computer Science / University Name 2001-2004<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sed et ornare quam. Cras scelerisque ex ultricies neque sodales tristique. Phasellus mattis dui ut enim tincidunt auctor. Maecenas euismod, orci eget varius elementum, nunc massa dignissim sapien, ac sagittis libero dolor vitae elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-primary"</span>&gt;</span>Testville High School 1994-2000<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean nisl enim, dictum in odio ut, suscipit efficitur diam. Nam nec velit a odio porta efficitur nec at magna.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-6"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>In the “Skills” section we’ll use Bootstrap’s progress bars to give a visual representation of the knowledge level for each particular skill:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-7" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-5"</span>&gt;</span>Skills<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>      
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 95%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"95"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 89%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"89"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>CSS<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 87%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"87"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 80%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"80"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>WordPress<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 78%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"78"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>Photoshop<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>       
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 77%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"77"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>PHP<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 75%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>Linux<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress mb-4"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height:25px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-primary text-left pl-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 65%"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"65"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>SEO<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-7"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>By default text is centered aligned in progress bar elements which doesn’t look so great in this scenario. That’s why we’ve added <code>text-left pl-2</code> to left align the text with some padding so it doesn’t sit hard against the edge.</p>
+
+
+
+<p>In the “Recent Work” section we’ll display 4 website screenshots. The only new piece of Bootstrap used in this section is  <code>img-thumnail</code> which slightly rounds the corners of the images, adds some padding, and a light gray border:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-8" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mb-5"</span>&gt;</span>Recent Work<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid img-thumbnail"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"screenshot.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid img-thumbnail"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"screenshot.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid img-thumbnail"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"screenshot.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md mb-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid img-thumbnail"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"screenshot.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> </code></div><small class="shcb-language" id="shcb-language-8"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>Let’s finish the page by adding a <code>&lt;footer&gt;</code> with some social links:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-9" data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-dark text-white-50 text-center mt-5 p-3"</span>&gt;</span>
+  <span class="hljs-symbol">&amp;copy;</span> 2020 Laura Collins - <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white-50"</span>&gt;</span>GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> | <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white-50"</span>&gt;</span>LinkedIn<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> | <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-white-50"</span>&gt;</span>Twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></code></div><small class="shcb-language" id="shcb-language-9"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">HTML, XML</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">xml</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p></p>
+			<!-- <p><img src="https://w3collective.com/wp-content/themes/w3c/img/ad-amazon-01.png"  alt="" /></p> -->
+     	</div>
+		
+			<h4>Related Posts</h4><div id="articles">						<article>
+							<a class="teaser" href="https://w3collective.com/restaurant-landing-page-bootstrap/" rel="bookmark">				
+								Develop a simple restaurant landing page with Bootstrap 5							</a>
+						</article>
+						</div>	
+			<h4><span>#AD</span> Shop Web Developer T-Shirts</h4>
+			<div id="ads-4up">
+				<div class="ad">
+					<a href="https://amzn.to/3t7wNYL" rel="nofollow" target="_blank">
+						<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/ad-tshirt-01.jpg" alt="No Internet T-Shirt">
+					</a>
+				</div>
+				<div class="ad">
+					<a href="https://amzn.to/3w3IEcn" rel="nofollow" target="_blank">
+						<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/ad-tshirt-02.jpg" alt="Programmer Samurai T-Shirt">
+					</a>
+				</div>
+				<div class="ad">
+					<a href="https://amzn.to/3I8r0GJ" rel="nofollow" target="_blank">
+						<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/ad-tshirt-03.jpg" alt="Full Stack Developer T-Shirt">
+					</a>
+				</div>
+				<div class="ad">
+					<a href="https://amzn.to/3tSknmD" rel="nofollow" target="_blank">
+						<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/ad-tshirt-04.jpg" alt="Evolution of Man T-Shirt">
+					</a>
+				</div>
+			</div>
+
+		
+</article>		
+	
+	</main>		
+</div>
+
+<footer id="footer" class="container">
+	<a id="footer-hosting" href="https://www.dreamhost.com/r.cgi?2267735" target="_blank">
+		<img src="./Develop a single page HTML resume using Bootstrap 5 - w3collective_files/logo-dreamhost.png" width="150" alt="Dreamhost Logo">		
+	</a>
+	<nav>	    
+		<div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-1146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1146"><a href="https://w3collective.com/">Home</a></li>
+<li id="menu-item-1147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1147"><a href="https://w3collective.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1950"><a href="https://w3collective.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+<li id="menu-item-1148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1148"><a href="https://w3collective.com/contact/">Contact</a></li>
+</ul></div>	
+		<span>©2023 w3collective - Practical HTML, CSS, &amp; JavaScript tutorials.</span>	 
+	</nav>	
+</footer>
+
+
+
+
+
+<div id="caos-detect-ad-block" style="display: none;"></div></body></html>
